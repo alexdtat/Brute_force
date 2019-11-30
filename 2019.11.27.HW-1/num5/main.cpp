@@ -24,7 +24,7 @@ int main()
     };
 
     while (p <= n + 2){
-        if ((nat_numbers[p] != 0) && (nat_numbers[p-2] == 0) && (nat_numbers[p/nat_numbers[p]] == 0)){
+        if ((nat_numbers[p] != 0) && (nat_numbers[p-2] == 0) && (nat_numbers[p/nat_numbers[p]] == 0) && (nat_numbers[nat_numbers[p]] == 0)){
             cout << p - 2 << ' ';
         };
 
