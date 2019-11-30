@@ -24,11 +24,9 @@ int main()
         nat_numbers[k] = 0;
     };
     while (counter < n){
-        if (!nat_numbers[i]){
-            if (is_prime_number(i)){
-                for (int j = i; i*j < 3*n; j++){
-                    nat_numbers[i*j] = 1;
-                }
+        if (is_prime_number(i)){
+            for (int j = i; i*j < 3*n; j++){
+                nat_numbers[i*j] = 1;
             }
         }
         else{

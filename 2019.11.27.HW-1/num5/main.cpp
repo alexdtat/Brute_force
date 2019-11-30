@@ -4,14 +4,6 @@ using namespace std;
 
 /*Напишите программу, находящую все простые числа Ченя не превосходящие n. Программа должна работать не более чем за O(n*log log n) шагов.*/
 
-bool is_prime_number (int num){
-    if (num == 1) return 0;
-    for (int i = 2; i <= sqrt(num); i++){
-        if (!(num % i)) return 0;
-    };
-    return 1;
-}
-
 int main()
 {
     int n = 0;
@@ -25,10 +17,8 @@ int main()
     nat_numbers[1] = 1;
     for (int i = 2; i < n + 2; i++){
         if (nat_numbers[i] == 0){
-            if (is_prime_number(i)){
-                for (int j = 2; i*j < n+2; j++){
-                    nat_numbers[i*j] = j;
-                }
+            for (int j = 2; i*j < n+2; j++){
+                nat_numbers[i*j] = j;
             }
         }
     };
